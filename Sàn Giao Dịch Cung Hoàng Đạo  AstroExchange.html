@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sàn Giao Dịch Cung Hoàng Đạo | AstroExchange</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header>
+        <h1>AstroExchange 🪙</h1>
+        <nav>
+            <ul>
+                <li><a href="#market">Thị Trường</a></li>
+                <li><a href="#trade">Giao Dịch</a></li>
+                <li><a href="#wallet">Ví Của Tôi</a></li>
+                <li><a href="#login">Đăng Nhập</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="market">
+            <h2>Bảng Tỷ Giá Hối Đoái Cung Hoàng Đạo</h2>
+            <p>Tỷ giá được cập nhật theo vị trí Sao Mộc (Jupiter) và Sao Thổ (Saturn) hiện tại.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tiền Tệ Cung</th>
+                        <th>Ký Hiệu</th>
+                        <th>Giá Mua (USD Tưởng Tượng)</th>
+                        <th>Giá Bán (USD Tưởng Tượng)</th>
+                        <th>Thay Đổi (24h)</th>
+                    </tr>
+                </thead>
+                <tbody id="rate-table-body">
+                    <tr>
+                        <td>Bạch Dương (Aries)</td>
+                        <td>ARI</td>
+                        <td>$1.05</td>
+                        <td>$1.04</td>
+                        <td class="up">+1.2%</td>
+                    </tr>
+                    <tr>
+                        <td>Kim Ngưu (Taurus)</td>
+                        <td>TAU</td>
+                        <td>$0.98</td>
+                        <td>$0.97</td>
+                        <td class="down">-0.5%</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="trade">
+            <h2>Thực Hiện Giao Dịch</h2>
+            <form id="trade-form">
+                <div class="form-group">
+                    <label for="from-currency">Trao đổi Từ:</label>
+                    <select id="from-currency" name="from-currency">
+                        <option value="ARI">Bạch Dương (ARI)</option>
+                        <option value="TAU">Kim Ngưu (TAU)</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="to-currency">Sang:</label>
+                    <select id="to-currency" name="to-currency">
+                        <option value="TAU">Kim Ngưu (TAU)</option>
+                        <option value="ARI">Bạch Dương (ARI)</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Số Lượng:</label>
+                    <input type="number" id="amount" name="amount" min="1" required>
+                </div>
+
+                <p id="exchange-rate-display">Tỷ giá hiện tại: 1 ARI = 0.99 TAU</p>
+
+                <button type="submit">Xác Nhận Giao Dịch</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="wallet">
+            <h2>Ví Của Bạn</h2>
+            <p>Số dư hiện tại của bạn:</p>
+            <ul>
+                <li>**ARI:** <span id="balance-ari">150.00</span></li>
+                <li>**TAU:** <span id="balance-tau">25.00</span></li>
+                </ul>
+            <button onclick="viewHistory()">Xem Lịch Sử Giao Dịch</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AstroExchange. Tất cả các giao dịch chỉ mang tính chất giải trí.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
